@@ -1,8 +1,10 @@
-import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { UserService } from './user.service'; 
+import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
-import { BrowserModule } from '@angular/platform-browser';
 import { AboutComponent } from './about/about.component';
-import { AppComponent } from './app.component';
 import { routes } from './app.router';
 import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -28,9 +30,10 @@ import { MaintenanceComponent } from './maintenance/maintenance.component';
     BrowserModule,
     routes,
     ReactiveFormsModule,
+    HttpClientModule,
     RouterModule.forRoot([{path: 'registration', component: RegistrationComponent},]),
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

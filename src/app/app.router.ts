@@ -14,13 +14,14 @@ import { MaintenanceComponent } from './maintenance/maintenance.component';
 // pathMatch is specifying a strict matching of path to reach the destination page.
 
 export const router: Routes = [
-    { path: '', redirectTo: "", pathMatch: 'full'}, //default page
+    { path: '', redirectTo: "about", pathMatch: 'full'}, //default page
     { path: 'about', component: AboutComponent },
     { path: 'slider', component: SliderComponent },
     { path: 'gallery', component: GalleryComponent},
     { path: 'registration', component: RegistrationComponent},
     { path: 'contact', component: ContactComponent},
-    { path: 'maintenance', component: MaintenanceComponent}
+    { path: 'maintenance', component: MaintenanceComponent},
+    
     
 ];
 //RouterModule.forRoot is for creating routes for the entire application

@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { UserService } from './user.service'; 
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -31,9 +30,11 @@ import { MaintenanceComponent } from './maintenance/maintenance.component';
     routes,
     ReactiveFormsModule,
     HttpClientModule,
-    RouterModule.forRoot([{path: 'registration', component: RegistrationComponent},]),
+    RouterModule.forRoot([{ path: 'registration', component: RegistrationComponent },], {
+    initialNavigation: 'enabledBlocking'
+}),
   ],
-  providers: [UserService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

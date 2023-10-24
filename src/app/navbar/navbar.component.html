@@ -1,5 +1,5 @@
 <nav class="navbar sticky-top navbar-light bg-light navbar-expand-lg text-white">
-    <div class="container-fluid" style="background-color: #020403; height: 100px;">
+    <div class="container-fluid" style="background-color: #020403; height: 150px;">
 
 
 
@@ -19,7 +19,7 @@
                 <!-- Left links -->
                 
 
-                <ul class="navbar-nav mb-2 mb-lg-0">
+                <ul class="navbar-nav mb-2 mb-lg-0" style="font-family:cursive;">
                     <li class="nav-item">
                         <a class="nav-link active navbaritems" aria-current="page" href="#"
                             style="color: white;">Home</a>
@@ -51,16 +51,22 @@
                         <a class="nav-link navbaritems" routerLink="gallery">Gallery</a>
                     </li>
                     
-                    <li class="nav-item">
+                    <li class="nav-item" >
                         <a class="nav-link navbaritems" routerLink="contact">Contact Us</a>
                     </li>
                 </ul>
-                <!-- Left links -->
+                
+                
             </div>
-            <!-- Collapsible wrapper -->
+
+                
+                <div class="search-container" style="float: right;padding-bottom: 20px;">
+                    <form action="/action_page.php">
+                      <input type="text" placeholder="Search.." name="search">
+                      <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                  </div>
+    
         </div>
-        <!-- Container wrapper -->
-
-
     </div>
 </nav>
